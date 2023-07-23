@@ -1,9 +1,11 @@
 package com.cuchicorral.Departamento.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Date;
+import java.util.List;
 
 @Getter
 @Setter
@@ -29,4 +31,12 @@ public class Inquilino {
     private String email;
     private Double puntuacionPromedio;
     private StringBuilder observaciones;
+    @ManyToMany
+    @JoinTable(
+            name = "Inquilino_Reserva",
+            joinColumns = @JoinColumn(name = "id_inquilino"),
+            inverseJoinColumns = @JoinColumn(name = "id_reserva")
+    )
+    @JsonIgnore
+    private List<Reserva> reservas;
 }
