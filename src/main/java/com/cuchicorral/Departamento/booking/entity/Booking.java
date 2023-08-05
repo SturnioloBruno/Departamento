@@ -2,15 +2,15 @@ package com.cuchicorral.Departamento.booking.entity;
 
 import com.cuchicorral.Departamento.tenant.entity.Tenant;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
+import lombok.Data;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
+@Entity
+@Data
 public class Booking {
     @Id
     @GeneratedValue

@@ -2,3 +2,13 @@ spring:
   output:
     ansi:
       enabled: always
+  datasource:
+    url: jdbc:mysql://localhost:3306/department
+    username: root
+    password: mysql
+    driverClassname: com.mysql.cj.jdbc.Driver
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    hibernate:
+      ddl-auto: update
