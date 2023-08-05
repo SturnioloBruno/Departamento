@@ -1,13 +1,11 @@
 package com.cuchicorral.Departamento.tenant.entity;
 
-import com.cuchicorral.Departamento.booking.entity.Reserva;
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.cuchicorral.Departamento.booking.entity.Booking;
 import jakarta.persistence.*;
 import lombok.Data;
 
 import java.util.Date;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -33,5 +31,5 @@ public class Tenant {
             joinColumns = @JoinColumn(name = "tenant_id"),
             inverseJoinColumns = @JoinColumn(name = "booking_id")
     )
-    private Set<Reserva> assignedBookings = new HashSet<>();
+    private Set<Booking> assignedBookings = new HashSet<>();
 }
