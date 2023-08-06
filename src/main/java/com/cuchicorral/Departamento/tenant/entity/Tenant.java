@@ -25,11 +25,19 @@ public class Tenant {
     private String email;
     private Double averageScore;
     private StringBuilder observations;
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(
             name = "tenant_booking",
             joinColumns = @JoinColumn(name = "tenant_id"),
             inverseJoinColumns = @JoinColumn(name = "booking_id")
     )
     private Set<Booking> assignedBookings = new HashSet<>();
+
+    public Set<Booking> getAssignedBookings() {
+        return assignedBookings;
+    }
+
+    public void setAssignedBookings(Set<Booking> assignedBookings) {
+        this.assignedBookings = assignedBookings;
+    }
 }

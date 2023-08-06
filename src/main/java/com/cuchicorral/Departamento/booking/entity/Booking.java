@@ -4,13 +4,16 @@ import com.cuchicorral.Departamento.tenant.entity.Tenant;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.Date;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Booking {
     @Id
     @GeneratedValue
@@ -25,5 +28,5 @@ public class Booking {
     private String observations;
     @JsonIgnore
     @ManyToMany(mappedBy = "assignedBookings")
-    private Set<Tenant> tenants;
+    private Set<Tenant> tenantSet = new HashSet<>();
 }
