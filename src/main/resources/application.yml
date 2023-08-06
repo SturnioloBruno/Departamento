@@ -9,19 +9,13 @@ spring:
   output:
     ansi:
       enabled: always
-
-# Configuración de la base de datos
   datasource:
-    url: jdbc:mysql://localhost:3306/departamento
+    url: jdbc:mysql://localhost:3306/department
     username: ${userMySql}
     password: ${passMySql}
-    driverClassName: com.mysql.cj.jdbc.Driver
+    driverClassname: com.mysql.cj.jdbc.Driver
   jpa:
-    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
     show-sql: true
     hibernate:
-      ddlAuto: update
-    properties:
-      hibernate:
-        format_sql: true
-    open-in-view: false
+      ddl-auto: update
