@@ -1,11 +1,18 @@
+# Configuración para que no muestre el error en el json, y asi mejorar la seguridad
+server:
+  error:
+    include-message: never
+    include-stacktrace: never
+
+# Configuracion para que muestre los colores en la salida por consola spring
 spring:
   output:
     ansi:
       enabled: always
   datasource:
     url: jdbc:mysql://localhost:3306/department
-    username: root
-    password: mysql
+    username: ${userMySql}
+    password: ${passMySql}
     driverClassname: com.mysql.cj.jdbc.Driver
   jpa:
     generate-ddl: true
