@@ -10,12 +10,16 @@ spring:
     ansi:
       enabled: always
   datasource:
-    url: jdbc:mysql://localhost:3306/department
+    url: jdbc:mysql://${DB_HOSTnombreServicio:localhost}:${DB_HOST_PORTpuerto:3306}/${DB_SCHEMAnombre:department}
     username: ${userMySql}
     password: ${passMySql}
     driverClassname: com.mysql.cj.jdbc.Driver
   jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
     generate-ddl: true
     show-sql: true
     hibernate:
       ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true

@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  departamento:
+    build:
+      context: .
+    ports:
+      - 8080:8080
+    environment:
+      userMySql: root
+      passMySql: mysql
+      DB_HOSTnombreServicio: basededatos
+      DB_HOST_PORTpuerto: 3306
+      DB_SCHEMAnombre: department
+
+  basededatos:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: mysql
+      MYSQL_DATABASE: department
+    ports:
+      - 3306:3306
