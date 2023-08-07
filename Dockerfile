@@ -1,4 +1,5 @@
 FROM openjdk:17-alpine
 ARG JAR_FILE=target/*.jar
-COPY ./target/Departamento-1.0.0.jar departamentoCuchi.jar
+COPY ${JAR_FILE} departamentoCuchi.jar
 ENTRYPOINT ["java","-jar","/departamentoCuchi.jar"]
+EXPOSE 8080
