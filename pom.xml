@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.cuchicorral</groupId>
 	<artifactId>Departamento</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>Departamento</name>
 	<description>Proyecto Personal Integrador (PPI)</description>
 	<properties>
