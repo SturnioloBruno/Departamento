@@ -22,6 +22,7 @@ y MVP(Minimal Value Product), etc.
 la API REST. Manejo de Spring Boot, ORM hibernate, relaciones en JPA, estructura en capas MVC, JAVA, etc.
 3. Conocimientos DevOps: Será necesario para desplegar la aplicación localmente en la computadora y, posteriormente,
 exponerla al público, para ello previamente se dockerizará, simulando un proceso de despliegue real.
+Creación y uso de Dockerfile, creación y uso de docker-compose, uso de variables de entorno y propiedades por defecto.
 Se listarán los conocimientos DevOps empleados a medida que se vayan aplicando en el proyecto.
 
 El objetivo final de este proyecto es crear una aplicación de calidad que cumpla con las necesidades y expectativas del
