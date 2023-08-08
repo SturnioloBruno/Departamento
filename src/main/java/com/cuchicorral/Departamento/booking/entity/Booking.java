@@ -26,7 +26,6 @@ public class Booking {
     private Boolean confirmed;
     private Double finalScore;
     private String observations;
-    @JsonIgnore
     @ManyToMany(mappedBy = "assignedBookings")
     private Set<Tenant> tenantSet = new HashSet<>();
 }

@@ -1,0 +1,251 @@
+{
+	"info": {
+		"_postman_id": "2032ae1d-33e3-4d19-8cfd-78bacdb6c13d",
+		"name": "Departamento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20264837",
+		"_collection_link": "https://galactic-meadow-676117.postman.co/workspace/Team-Workspace~11c3baac-0d55-4469-8965-48c011ec1b1c/collection/20264837-2032ae1d-33e3-4d19-8cfd-78bacdb6c13d?action=share&creator=20264837&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "inquilino",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tenant/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tenant/getTenants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"getTenants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"jero\",\r\n    \"dni\":\"36046044\",\r\n    \"birthday\": \"1991-11-13\",\r\n    \"address\":\"Av.CuchiCorral\",\r\n    \"city\":\"San Luis\",\r\n    \"province\":\"San Luis\",\r\n    \"occupation\":\"Programador\",\r\n    \"tlephone\":\"2665035676\",\r\n    \"email\":\"br1@gmail.com\",\r\n    \"averageScore\": 10.0,\r\n    \"observations\":\"excelente programador y muy buen inquilino\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tenant/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign book to tenant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tenant/1/booking/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"1",
+								"booking",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/tenant/delete/53",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								"delete",
+								"53"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reserva",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/reserva/find/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"reserva",
+								"find",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/booking/getBookings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"getBookings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"previousScore\": 9.5,\r\n    \"reservationSign\": 10500,\r\n    \"dateFrom\": \"2023-07-23\",\r\n    \"dateTo\": \"2023-07-25\",\r\n    \"price\": 20000,\r\n    \"confirmed\": true,\r\n    \"finalScore\": 1,\r\n    \"observations\": \"les gustó, pero no cuidaron la limpieza\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/booking/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/booking/delete/102",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"booking",
+								"delete",
+								"102"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

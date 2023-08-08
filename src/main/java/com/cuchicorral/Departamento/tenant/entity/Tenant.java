@@ -1,6 +1,7 @@
 package com.cuchicorral.Departamento.tenant.entity;
 
 import com.cuchicorral.Departamento.booking.entity.Booking;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -26,6 +27,7 @@ public class Tenant {
     private Double averageScore;
     private StringBuilder observations;
     @ManyToMany(cascade = CascadeType.ALL)
+    @JsonIgnore
     @JoinTable(
             name = "tenant_booking",
             joinColumns = @JoinColumn(name = "tenant_id"),

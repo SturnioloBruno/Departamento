@@ -1,0 +1,21 @@
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (6.5, 30960, '2023-08-11', '2024-02-10', 55044, false, 3);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (8.8, 11438, '2023-07-29', '2024-01-08', 35164, false, 9);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (9.2, 23597, '2023-09-25', '2023-07-26', 31713, true, 2);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (6.4, 81614, '2023-09-26', '2024-02-05', 33194, false, 1);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (9.2, 51106, '2023-10-18', '2023-11-21', 63953, true, 1);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (7.0, 68198, '2023-10-03', '2024-01-06', 1224, false, 10);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (0.4, 12303, '2023-09-04', '2023-09-20', 29138, false, 2);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (6.7, 25999, '2023-10-08', '2023-08-29', 62358, true, 8);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (0.7, 30515, '2023-08-07', '2024-02-21', 50477, false, 3);
+insert into booking (previous_score, reservation_sign, date_from, date_to, price, confirmed, final_score) values (5.8, 13062, '2023-09-19', '2023-08-27', 16978, true, 3);
+
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Cal', 64654454, '1991-11-26', '5216 Caliangt Plaza', 'Portelândia', null, 'Computer Systems Analyst II', '847-660-2947', 'cargont0@army.mil', 7.8);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Tamas', 22877065, '1992-10-21', '59794 Hudson Way', 'Charlotte', 'North Carolina', 'Recruiting Manager', '704-142-0151', 'tcatmull1@sbwire.com', 6.0);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Noby', 95604251, '1992-04-13', '4670 Grim Circle', 'Dongpu', null, 'Safety Technician I', '945-237-5800', 'nabramof2@opensource.org', 3.0);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Carr', 67746695, '1993-01-03', '177 Lighthouse Bay Center', 'Banjar Kertasari', null, 'Tax Accountant', '329-445-3084', 'ccucuzza3@gov.uk', 2.5);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Lucais', 56849522, '1991-11-18', '1390 Grayhawk Junction', 'Tanahedang', null, 'Dental Hygienist', '532-704-4506', 'ljewster4@surveymonkey.com', 9.6);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Chicky', 91110673, '1992-10-29', '7363 Norway Maple Center', 'Niška Banja', null, 'Senior Developer', '303-474-8474', 'cbentley5@last.fm', 6.8);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Ronalda', 37636629, '1992-02-13', '8290 Pennsylvania Point', 'Чегране', null, 'Accountant I', '101-973-0612', 'rbarrie6@mozilla.org', 3.3);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Maire', 51817540, '1991-12-09', '10 Southridge Trail', 'Puma', null, 'Teacher', '457-911-2395', 'mhalloran7@sciencedirect.com', 0.1);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Nye', 49977860, '1992-09-17', '1 Sullivan Street', 'Gambarjati', null, 'Statistician IV', '297-595-8104', 'nhorbath8@npr.org', 2.8);
+insert into tenant (name, dni, birthday, address, city, province, occupation, telephone, email, average_score) values ('Myles', 30873619, '1993-02-16', '9411 Linden Court', 'Hainan', null, 'Budget/Accounting Analyst IV', '155-201-8182', 'mslaten9@wunderground.com', 6.0);
