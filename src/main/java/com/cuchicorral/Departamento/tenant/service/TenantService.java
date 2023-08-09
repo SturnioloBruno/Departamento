@@ -25,7 +25,7 @@ public class TenantService {
     }
 
     public ResponseEntity<?> saveTenant(Tenant tenant){
-        if (tenantRepository.exists(Example.of(tenant))){
+        if (tenantRepository.exists(Example.of(tenant)) || tenantRepository.findByDni(tenant.getDni()).isPresent()){
             return ResponseEntity.ok("El inquilino ya existe. Si crees que es un error, revisa que el dni no este repetido");
         }
         return ResponseEntity.ok(tenantRepository.save(tenant));
@@ -36,6 +36,14 @@ public class TenantService {
             return tenantRepository.findAllByTenantId(tenantId);
         } else {
             return tenantRepository.findAll();
+        }
+    }
+
+    public Tenant getTenantByDni(String tenantDni) {
+        if (tenantRepository.findByDni(tenantDni).isPresent()){
+            return tenantRepository.findByDni(tenantDni).get();
+        }else {
+            return null;
         }
     }
 

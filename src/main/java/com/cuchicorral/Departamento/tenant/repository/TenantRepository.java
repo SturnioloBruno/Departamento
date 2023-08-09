@@ -11,5 +11,6 @@ import java.util.Optional;
 @Repository
 public interface TenantRepository extends JpaRepository<Tenant, Long> {
     List<Tenant> findAllByTenantId(Long tenantId);
-//    Optional<Tenant> findByTenantDni(String tenantDni);
+    Optional<Tenant> findByDni(String tenantDni);
 }
+//

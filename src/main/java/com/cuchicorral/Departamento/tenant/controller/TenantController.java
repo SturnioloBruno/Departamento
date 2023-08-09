@@ -34,6 +34,11 @@ public class TenantController {
         return tenantService.getTenantDetails(tenantId);
     }
 
+    @GetMapping("/getByDni/{dni}")
+    public Tenant getTenantByDni(@PathVariable String dni) {
+        return tenantService.getTenantByDni(dni);
+    }
+
     @DeleteMapping("delete/{tenantId}")
     public ResponseEntity removeTenant(@PathVariable Long tenantId){
         tenantService.deleteTenant(tenantId);
