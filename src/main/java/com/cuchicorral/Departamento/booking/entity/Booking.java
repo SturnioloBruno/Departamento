@@ -27,5 +27,7 @@ public class Booking {
     private Double finalScore;
     private String observations;
     @ManyToMany(mappedBy = "assignedBookings")
+    @Setter
+    @Getter
     private Set<Tenant> tenantSet = new HashSet<>();
 }

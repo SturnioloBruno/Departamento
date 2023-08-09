@@ -1,5 +1,7 @@
 package com.cuchicorral.Departamento.tenant.controller;
 
+import com.cuchicorral.Departamento.booking.entity.Booking;
+import com.cuchicorral.Departamento.booking.service.BookingService;
 import com.cuchicorral.Departamento.tenant.entity.Tenant;
 import com.cuchicorral.Departamento.tenant.service.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +17,8 @@ public class TenantController {
 
     @Autowired
     private TenantService tenantService;
+    @Autowired
+    private BookingService bookingService;
 
     @PostMapping("/save")
     public ResponseEntity<Tenant> saveTenant(@RequestBody Tenant tenant) {
@@ -34,10 +38,11 @@ public class TenantController {
     }
 
     @PutMapping("/{tenantId}/booking/{bookId}")
-    public Tenant assignBookingToTenant(
+    public Booking assignBookingToTenant(
             @PathVariable Long tenantId,
             @PathVariable Long bookId
     ){
-        return tenantService.assignTenantToBook(tenantId, bookId);
+        tenantService.assignTenantToBook(tenantId, bookId);
+        return bookingService.assignBookToTenant(tenantId, bookId);
     }
 }
