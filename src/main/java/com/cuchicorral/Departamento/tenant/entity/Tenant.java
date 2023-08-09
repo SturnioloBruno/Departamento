@@ -16,6 +16,7 @@ public class Tenant {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tenantId;
     private String name;
+    @Column(unique = true)
     private String dni;
     private Date birthday;
     private String address;

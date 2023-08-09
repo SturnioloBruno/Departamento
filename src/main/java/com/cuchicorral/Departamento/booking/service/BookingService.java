@@ -13,10 +13,14 @@ import java.util.Set;
 @Service
 public class BookingService {
 
+    private final BookingRepository bookingRepository;
+    private final TenantRepository tenantRepository;
+
     @Autowired
-    private BookingRepository bookingRepository;
-    @Autowired
-    private TenantRepository tenantRepository;
+    public BookingService(BookingRepository bookingRepository, TenantRepository tenantRepository) {
+        this.bookingRepository = bookingRepository;
+        this.tenantRepository = tenantRepository;
+    }
 
     public void saveBooking(Booking booking) { bookingRepository.save(booking); }
 

@@ -13,8 +13,12 @@ import java.util.List;
 @RequestMapping("/api/v1/booking")
 public class BookingController {
 
+    private final BookingService bookingService;
+
     @Autowired
-    private BookingService bookingService;
+    public BookingController(BookingService bookingService) {
+        this.bookingService = bookingService;
+    }
 
     @PostMapping("/save")
     public ResponseEntity createBooking(@RequestBody Booking booking) {

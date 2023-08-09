@@ -15,15 +15,18 @@ import java.util.List;
 @RequestMapping("api/v1/tenant")
 public class TenantController {
 
+    private final TenantService tenantService;
+    private final BookingService bookingService;
+
     @Autowired
-    private TenantService tenantService;
-    @Autowired
-    private BookingService bookingService;
+    public TenantController(TenantService tenantService, BookingService bookingService) {
+        this.tenantService = tenantService;
+        this.bookingService = bookingService;
+    }
 
     @PostMapping("/save")
-    public ResponseEntity<Tenant> saveTenant(@RequestBody Tenant tenant) {
-        tenantService.saveTenant(tenant);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+    public ResponseEntity<?> saveTenant(@RequestBody Tenant tenant) {
+        return ResponseEntity.ok(tenantService.saveTenant(tenant));
     }
 
     @GetMapping(value = {"/getTenants", "/{tenantId}"})
