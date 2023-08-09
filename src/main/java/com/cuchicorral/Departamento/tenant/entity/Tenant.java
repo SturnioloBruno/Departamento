@@ -13,7 +13,7 @@ import java.util.Set;
 @Data
 public class Tenant {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long tenantId;
     private String name;
     private String dni;

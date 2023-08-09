@@ -16,7 +16,7 @@ import java.util.Set;
 @Setter
 public class Booking {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long bookingId;
     private Double previousScore;
     private Double reservationSign;
