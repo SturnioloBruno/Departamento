@@ -26,7 +26,7 @@ public class Booking {
     private Boolean confirmed;
     private Double finalScore;
     private String observations;
-    @ManyToMany(mappedBy = "assignedBookings")
+    @ManyToMany(mappedBy = "assignedBookings", cascade = CascadeType.ALL)
     @Setter
     @Getter
     private Set<Tenant> tenantSet = new HashSet<>();
